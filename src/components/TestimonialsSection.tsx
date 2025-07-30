@@ -6,26 +6,27 @@ import { motion } from 'framer-motion'
 
 const testimonials = [
   {
-    name: 'Marie Dubois',
-    role: 'Professeure de Mathématiques',
-    company: 'Lycée Victor Hugo',
-    content: 'Algoréa a transformé la façon dont j\'enseigne. Mes étudiants sont plus engagés et leurs résultats se sont considérablement améliorés. L\'interface est intuitive et les outils d\'analyse m\'aident à adapter mon enseignement.',
-    avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face',
+    name: 'Skolar by Probabl',
+    role: 'Plateforme de formation',
+    company: 'skolar.probabl.ai',
+    content: 'Plateforme de formation en data science développée avec notre technologie. Un exemple concret d\'adaptation de notre LMS pour des besoins spécifiques en formation professionnelle.',
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face',
     rating: 5,
+    link: 'https://skolar.probabl.ai/en/a/home;pa=0',
   },
   {
-    name: 'Jean-Pierre Martin',
-    role: 'Directeur Pédagogique',
-    company: 'École Supérieure de Commerce',
-    content: 'Nous avons migré vers Algoréa il y a 6 mois et c\'est la meilleure décision que nous ayons prise. La plateforme est stable, sécurisée et nos enseignants l\'adorent. Le support client est exceptionnel.',
+    name: 'Concours Castor',
+    role: 'Concours international',
+    company: 'France-IOI',
+    content: 'Plus de 700,000 participants par an dans plus de 50 pays. Notre plateforme gère avec succès des événements éducatifs de grande envergure avec une fiabilité éprouvée.',
     avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face',
     rating: 5,
   },
   {
-    name: 'Sophie Lefebvre',
-    role: 'Formatrice en Entreprise',
-    company: 'TechCorp Formation',
-    content: 'L\'intégration avec nos outils existants a été transparente. Les fonctionnalités d\'IA personnalisée ont permis à nos employés d\'apprendre à leur rythme. Un investissement qui se rentabilise rapidement.',
+    name: 'Clients internationaux',
+    role: 'Déploiements enterprise',
+    company: 'Divers secteurs',
+    content: 'Intégration SSO enterprise, gestion de millions d\'utilisateurs, adaptation à des contextes pédagogiques variés. Une technologie éprouvée qui s\'adapte à tous les besoins.',
     avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face',
     rating: 5,
   },
@@ -43,7 +44,7 @@ export default function TestimonialsSection() {
             viewport={{ once: true }}
             className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4"
           >
-            Ce que disent nos utilisateurs
+            Références et déploiements
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -52,8 +53,8 @@ export default function TestimonialsSection() {
             viewport={{ once: true }}
             className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
           >
-            Découvrez pourquoi plus de 50,000 éducateurs font confiance à Algoréa 
-            pour transformer leur approche de l&apos;enseignement.
+            Découvrez des exemples concrets d'utilisation de notre technologie 
+            dans différents contextes éducatifs et professionnels.
           </motion.p>
         </div>
 
@@ -66,7 +67,7 @@ export default function TestimonialsSection() {
               transition={{ duration: 0.5, delay: index * 0.2 }}
               viewport={{ once: true }}
             >
-              <Card className="h-full hover:shadow-lg transition-shadow duration-300 border-0 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 relative overflow-hidden">
+              <Card className="h-full hover:shadow-lg transition-shadow duration-300 border-0 bg-white dark:bg-gray-800 relative overflow-hidden">
                 {/* Quote decoration */}
                 <div className="absolute top-4 right-4 opacity-10">
                   <Quote className="w-12 h-12 text-primary-600" />
@@ -83,11 +84,23 @@ export default function TestimonialsSection() {
                   {/* Content */}
                   <blockquote className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
                     &ldquo;{testimonial.content}&rdquo;
+                    {testimonial.link && (
+                      <div className="mt-3">
+                        <a 
+                          href={testimonial.link} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 font-medium text-sm underline"
+                        >
+                          Voir la plateforme →
+                        </a>
+                      </div>
+                    )}
                   </blockquote>
 
                   {/* Author */}
                   <div className="flex items-center">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-r from-primary-400 to-purple-500 mr-4 flex items-center justify-center text-white font-semibold">
+                    <div className="w-12 h-12 rounded-full bg-primary-600 mr-4 flex items-center justify-center text-white font-semibold">
                       {testimonial.name.split(' ').map(n => n[0]).join('')}
                     </div>
                     <div>
@@ -118,16 +131,16 @@ export default function TestimonialsSection() {
         >
           <div className="text-center mb-8">
             <p className="text-gray-600 dark:text-gray-400 mb-6">
-              Ils nous font déjà confiance
+              Projets basés sur notre technologie
             </p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-60">
             {[
-              'Université Paris-Sorbonne',
-              'Sciences Po',
-              'École Polytechnique',
-              'HEC Paris',
+              'France-IOI',
+              'GitHub Open Source',
+              'Concours Castor',
+              'Skolar by Probabl',
             ].map((institution) => (
               <div key={institution} className="text-center">
                 <div className="h-12 bg-gradient-to-r from-gray-300 to-gray-400 dark:from-gray-600 dark:to-gray-700 rounded-lg flex items-center justify-center mb-2">
@@ -151,17 +164,17 @@ export default function TestimonialsSection() {
           viewport={{ once: true }}
           className="mt-16 text-center"
         >
-          <div className="bg-gradient-to-r from-primary-50 to-purple-50 dark:from-primary-900/20 dark:to-purple-900/20 rounded-2xl p-8">
+          <div className="bg-primary-50 dark:bg-primary-900/20 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               Rejoignez des milliers d&apos;éducateurs satisfaits
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-              Commencez votre essai gratuit aujourd&apos;hui et découvrez comment Algoréa 
+              Commencez votre essai aujourd&apos;hui et découvrez comment Algoréa 
               peut transformer votre approche de l&apos;enseignement.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-medium">
-                Essai gratuit 14 jours
+                Essai 14 jours
               </button>
               <button className="px-6 py-3 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors font-medium">
                 Planifier une démo

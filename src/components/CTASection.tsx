@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 export default function CTASection() {
   return (
-    <section id="about" className="py-20 bg-gradient-to-br from-primary-600 via-primary-700 to-purple-700 relative overflow-hidden">
+    <section id="about" className="py-20 bg-primary-600 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white/10 rounded-full mix-blend-overlay filter blur-xl opacity-70 animate-blob"></div>
@@ -24,23 +24,23 @@ export default function CTASection() {
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
             Transformez l&apos;éducation
             <br />
-            <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
+            <span className="text-yellow-300">
               dès aujourd&apos;hui
             </span>
           </h2>
 
           <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-            Rejoignez des milliers d&apos;éducateurs qui ont déjà révolutionné leur 
-            approche de l&apos;enseignement avec Algoréa. Commencez votre essai gratuit 
-            maintenant et découvrez le futur de l&apos;apprentissage.
+            Contactez-nous pour découvrir comment notre plateforme LMS innovante 
+            peut s'adapter à vos contenus les plus ambitieux. Une équipe dédiée 
+            vous accompagne pour réaliser vos projets éducatifs sans limites.
           </p>
 
           {/* Benefits */}
           <div className="flex flex-wrap justify-center gap-6 mb-10">
             {[
-              'Essai gratuit 14 jours',
-              'Configuration en 5 minutes',
-              'Support expert inclus',
+              'Démo personnalisée',
+              'Équipe technique dédiée',
+              'Support 24/7 inclus',
             ].map((benefit, index) => (
               <motion.div
                 key={benefit}
@@ -68,7 +68,7 @@ export default function CTASection() {
               size="lg" 
               className="bg-white text-primary-700 hover:bg-gray-100 text-lg px-8 py-4 group"
             >
-              Commencer l&apos;essai gratuit
+              Demander une démo
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button 
@@ -76,7 +76,7 @@ export default function CTASection() {
               size="lg" 
               className="border-white text-white hover:bg-white/10 text-lg px-8 py-4"
             >
-              Planifier une démo
+              Planifier une démo personnalisée
             </Button>
           </motion.div>
 
@@ -94,18 +94,18 @@ export default function CTASection() {
                   <Star key={i} className="w-5 h-5 fill-current" />
                 ))}
               </div>
-              <span className="ml-2">4.9/5 sur 2,543 avis</span>
+              <span className="ml-2">700,000+ participants/an</span>
             </div>
             <div className="flex items-center">
               <div className="flex -space-x-2">
                 {[...Array(4)].map((_, i) => (
                   <div
                     key={i}
-                    className="w-8 h-8 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 border-2 border-white"
+                    className="w-8 h-8 rounded-full bg-yellow-500 border-2 border-white"
                   />
                 ))}
               </div>
-              <span className="ml-3">50,000+ éducateurs nous font confiance</span>
+              <span className="ml-3">50+ pays utilisateurs</span>
             </div>
           </motion.div>
 

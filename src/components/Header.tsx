@@ -62,11 +62,8 @@ export default function Header() {
             >
               {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </button>
-            <Button variant="outline" size="sm">
-              Se connecter
-            </Button>
             <Button size="sm">
-              Essai gratuit
+              Demander une démo
             </Button>
           </div>
 
@@ -101,11 +98,8 @@ export default function Header() {
                 </button>
               ))}
               <div className="pt-2 border-t border-gray-200 dark:border-gray-700 space-y-2">
-                <Button variant="outline" className="w-full">
-                  Se connecter
-                </Button>
                 <Button className="w-full">
-                  Essai gratuit
+                  Demander une démo
                 </Button>
               </div>
             </div>

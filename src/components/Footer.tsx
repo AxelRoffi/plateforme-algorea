@@ -70,26 +70,26 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              La plateforme d&apos;apprentissage nouvelle génération qui transforme 
-              l&apos;éducation grâce à l&apos;intelligence artificielle et des outils 
-              intuitifs conçus pour les éducateurs modernes.
+              La plateforme LMS qui s'adapte à vos contenus innovants. 
+              Développée par l'équipe France-IOI avec une expertise technique 
+              et pédagogique éprouvée.
             </p>
             
             {/* Contact info */}
             <div className="space-y-3">
               <div className="flex items-center text-gray-300">
                 <Mail className="w-4 h-4 mr-3" />
-                <span className="text-sm">contact@plateforme-algorea.com</span>
+                <span className="text-sm">axel.roffi@france-ioi.org</span>
               </div>
               <div className="flex items-center text-gray-300">
                 <Phone className="w-4 h-4 mr-3" />
-                <span className="text-sm">+33 1 23 45 67 89</span>
+                <span className="text-sm">france-ioi.org</span>
               </div>
               <div className="flex items-start text-gray-300">
                 <MapPin className="w-4 h-4 mr-3 mt-0.5" />
                 <span className="text-sm">
-                  42 Avenue des Champs-Élysées<br />
-                  75008 Paris, France
+                  Projets open source<br />
+                  disponibles sur GitHub
                 </span>
               </div>
             </div>

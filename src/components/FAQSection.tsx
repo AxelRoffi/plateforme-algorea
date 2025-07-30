@@ -6,10 +6,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 const faqs = [
   {
-    question: 'Comment fonctionne l\'essai gratuit ?',
-    answer: 'L\'essai gratuit dure 14 jours et donne accès à toutes les fonctionnalités du plan Pro. Aucune carte de crédit n\'est requise pour commencer. Vous pouvez annuler à tout moment sans frais.',
-  },
-  {
     question: 'Puis-je importer mes cours existants ?',
     answer: 'Oui, Algoréa permet d\'importer facilement vos contenus depuis d\'autres plateformes LMS comme Moodle, Canvas, ou Blackboard. Notre équipe peut vous accompagner dans le processus de migration.',
   },
@@ -35,7 +31,7 @@ const faqs = [
   },
   {
     question: 'Comment fonctionne la facturation ?',
-    answer: 'La facturation est mensuelle ou annuelle selon votre choix. Vous pouvez changer de plan à tout moment. Les paiements sont sécurisés via Stripe et nous acceptons toutes les cartes de crédit principales.',
+    answer: 'Nous contacter pour plus d\'informations sur nos options de facturation.',
   },
 ]
 
@@ -124,7 +120,7 @@ export default function FAQSection() {
           viewport={{ once: true }}
           className="mt-16 text-center"
         >
-          <div className="bg-gradient-to-r from-primary-50 to-purple-50 dark:from-primary-900/20 dark:to-purple-900/20 rounded-2xl p-8">
+          <div className="bg-primary-50 dark:bg-primary-900/20 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               Vous ne trouvez pas votre réponse ?
             </h3>

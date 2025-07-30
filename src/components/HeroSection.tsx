@@ -36,11 +36,10 @@ export default function HeroSection() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6"
           >
-            La plateforme
-            <span className="bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
-              {' '}d&apos;apprentissage{' '}
+            La plateforme LMS qui s'adapte
+            <span className="text-primary-600">
+              {' '}à vos contenus innovants{' '}
             </span>
-            nouvelle génération
           </motion.h1>
 
           {/* Subtitle */}
@@ -50,9 +49,8 @@ export default function HeroSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto"
           >
-            Algoréa révolutionne l&apos;éducation en ligne avec des outils intuitifs, 
-            des parcours personnalisés et une intelligence artificielle avancée pour 
-            maximiser l&apos;apprentissage de vos étudiants.
+            Bien au-delà de simples textes, vidéos et quiz. Créez des expériences 
+            d'apprentissage interactives sans limites.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -63,12 +61,12 @@ export default function HeroSection() {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
           >
             <Button size="lg" className="group">
-              Commencer gratuitement
+              Demander une démo
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button variant="outline" size="lg" className="group">
               <Play className="mr-2 w-4 h-4" />
-              Voir la démo
+              Planifier une démo personnalisée
             </Button>
           </motion.div>
 
@@ -88,7 +86,7 @@ export default function HeroSection() {
                   />
                 ))}
               </div>
-              <span className="ml-3">Utilisé par 50,000+ éducateurs</span>
+              <span className="ml-3">700,000+ participants/an</span>
             </div>
             <div className="flex items-center">
               <div className="flex text-yellow-400">
@@ -96,7 +94,7 @@ export default function HeroSection() {
                   <Star key={i} className="w-4 h-4 fill-current" />
                 ))}
               </div>
-              <span className="ml-2">4.9/5 (2,543 avis)</span>
+              <span className="ml-2">50+ pays utilisateurs</span>
             </div>
           </motion.div>
         </div>

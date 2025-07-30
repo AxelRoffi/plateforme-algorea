@@ -6,27 +6,27 @@ import { motion } from 'framer-motion'
 const stats = [
   {
     icon: Users,
-    value: '50,000+',
-    label: 'Éducateurs actifs',
-    description: 'Enseignants et formateurs du monde entier',
+    value: '700,000+',
+    label: 'Participants/an',
+    description: 'Concours Castor et autres projets',
   },
   {
     icon: BookOpen,
-    value: '2M+',
-    label: 'Cours créés',
-    description: 'Contenus pédagogiques de qualité',
+    value: '24/7',
+    label: 'Support disponible',
+    description: 'Assistance technique dédiée',
   },
   {
     icon: Trophy,
-    value: '98%',
-    label: 'Taux de satisfaction',
-    description: 'Évaluations positives de nos utilisateurs',
+    value: 'Robuste',
+    label: 'Millions d\'utilisateurs',
+    description: 'Plateforme éprouvée et fiable',
   },
   {
     icon: Globe,
-    value: '150+',
-    label: 'Pays',
-    description: 'Présence internationale croissante',
+    value: '50+',
+    label: 'Pays utilisateurs',
+    description: 'Présence internationale étendue',
   },
 ]
 
@@ -42,19 +42,9 @@ const achievements = [
     description: 'Première étape importante franchie',
   },
   {
-    year: '2022',
+    year: '2024',
     title: 'IA Intégrée',
     description: 'Lancement des fonctionnalités d\'intelligence artificielle',
-  },
-  {
-    year: '2023',
-    title: 'Expansion européenne',
-    description: 'Déploiement dans 15 nouveaux pays',
-  },
-  {
-    year: '2024',
-    title: '50,000+ éducateurs',
-    description: 'Communauté mondiale d\'enseignants',
   },
 ]
 
@@ -71,7 +61,7 @@ export default function StatsSection() {
             viewport={{ once: true }}
             className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4"
           >
-            L&apos;impact d&apos;Algoréa en chiffres
+            France-IOI en chiffres
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -80,8 +70,8 @@ export default function StatsSection() {
             viewport={{ once: true }}
             className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
           >
-            Rejoignez une communauté mondiale d&apos;éducateurs qui transforment 
-            l&apos;apprentissage avec Algoréa.
+            Rejoignez une plateforme éprouvée par des centaines de milliers 
+            d'utilisateurs dans le monde entier.
           </motion.p>
         </div>
 
@@ -97,7 +87,7 @@ export default function StatsSection() {
                 viewport={{ once: true }}
                 className="text-center group"
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-primary-500 to-purple-500 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-600 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Icon className="w-8 h-8 text-white" />
                 </div>
                 <div className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
@@ -134,7 +124,7 @@ export default function StatsSection() {
 
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-0.5 w-0.5 h-full bg-gradient-to-b from-primary-500 to-purple-500 hidden lg:block"></div>
+            <div className="absolute left-1/2 transform -translate-x-0.5 w-0.5 h-full bg-primary-500 hidden lg:block"></div>
 
             <div className="space-y-8 lg:space-y-12">
               {achievements.map((achievement, index) => (
@@ -182,7 +172,7 @@ export default function StatsSection() {
           viewport={{ once: true }}
           className="mt-20 text-center"
         >
-          <div className="bg-gradient-to-r from-primary-600 to-purple-600 rounded-2xl p-8 lg:p-12 text-white">
+          <div className="bg-primary-600 rounded-2xl p-8 lg:p-12 text-white">
             <h3 className="text-2xl lg:text-3xl font-bold mb-4">
               Prêt à rejoindre cette success story ?
             </h3>

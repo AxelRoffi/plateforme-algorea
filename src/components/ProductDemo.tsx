@@ -12,11 +12,6 @@ const screenshots = [
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
   },
   {
-    title: 'Interface de cours',
-    description: 'Créez et gérez vos contenus pédagogiques facilement',
-    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=600&fit=crop',
-  },
-  {
     title: 'Analytics avancés',
     description: 'Suivez les progrès et performances en temps réel',
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
@@ -154,7 +149,7 @@ export default function ProductDemo() {
                   {/* Screenshot content */}
                   <div className="relative h-full">
                     <div 
-                      className="w-full h-full bg-gradient-to-br from-primary-500 to-purple-600 flex items-center justify-center text-white"
+                      className="w-full h-full bg-primary-600 flex items-center justify-center text-white"
                     >
                       <div className="text-center">
                         <div className="text-2xl font-bold mb-2">{screenshots[activeScreenshot].title}</div>
@@ -192,13 +187,12 @@ export default function ProductDemo() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8"
+          className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8"
         >
           {[
             { value: '99.9%', label: 'Temps de disponibilité' },
             { value: '< 200ms', label: 'Temps de réponse' },
             { value: '24/7', label: 'Support technique' },
-            { value: '256-bit', label: 'Chiffrement SSL' },
           ].map((stat, index) => (
             <div key={index} className="text-center">
               <div className="text-2xl font-bold text-primary-600 dark:text-primary-400">
