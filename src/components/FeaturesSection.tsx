@@ -29,9 +29,9 @@ const features = [
 
 export default function FeaturesSection() {
   return (
-    <section id="features" className="py-20 bg-white dark:bg-gray-900">
+    <section id="features" className="py-16 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -87,6 +87,9 @@ export default function FeaturesSection() {
           })}
         </div>
 
+        {/* Separator */}
+        <div className="my-16 border-t border-gray-200 dark:border-gray-700"></div>
+
         {/* Feature highlight */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -98,10 +101,10 @@ export default function FeaturesSection() {
           <div className="bg-primary-600 rounded-2xl p-8 lg:p-12 text-white">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 className="text-2xl lg:text-3xl font-bold mb-4">
+                <h3 className="text-2xl lg:text-3xl font-bold mb-4 text-gray-900 dark:text-white">
                   Fonctionnalités détaillées
                 </h3>
-                <p className="text-lg opacity-90 mb-6">
+                <p className="text-lg text-gray-700 dark:text-gray-200 mb-6">
                   Types de contenus : QCM, textes à trous, réponses numériques/textuelles, vidéos, HTML/Markdown.
                   Gestion des épreuves : chronomètre, temps supplémentaire, blocage automatique, indices progressifs.
                 </p>
@@ -109,7 +112,7 @@ export default function FeaturesSection() {
                   {['Administration', 'Édition collaborative', 'Paramétrage données', 'Statistiques'].map((feature) => (
                     <span
                       key={feature}
-                      className="px-3 py-1 bg-white/20 rounded-full text-sm font-medium"
+                      className="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm font-medium"
                     >
                       {feature}
                     </span>
@@ -122,7 +125,7 @@ export default function FeaturesSection() {
                     <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Users className="w-8 h-8" />
                     </div>
-                    <p className="font-medium">Support technique 24/7</p>
+                    <p className="font-medium text-gray-900 dark:text-white">Support technique 24/7</p>
                   </div>
                 </div>
               </div>

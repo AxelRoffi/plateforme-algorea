@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-primary-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800 pt-20 pb-16 sm:pt-24 sm:pb-20">
+    <section className="relative overflow-hidden bg-gradient-to-br from-primary-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800 pt-20 pb-12 sm:pt-24 sm:pb-16">
       {/* Background decoration */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full h-full max-w-6xl">

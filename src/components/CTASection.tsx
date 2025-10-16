@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 export default function CTASection() {
   return (
-    <section id="about" className="py-20 bg-primary-600 relative overflow-hidden">
+    <section id="about" className="py-16 bg-primary-600 relative overflow-hidden border-t border-gray-200 dark:border-gray-700">
       {/* Background decoration */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white/10 rounded-full mix-blend-overlay filter blur-xl opacity-70 animate-blob"></div>
@@ -24,12 +24,12 @@ export default function CTASection() {
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
             Transformez l&apos;éducation
             <br />
-            <span className="text-yellow-300">
+            <span className="text-orange-600">
               dès aujourd&apos;hui
             </span>
           </h2>
 
-          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-900 dark:text-gray-200 mb-8 max-w-3xl mx-auto">
             Contactez-nous pour découvrir comment notre plateforme LMS innovante 
             peut s'adapter à vos contenus les plus ambitieux. Une équipe dédiée 
             vous accompagne pour réaliser vos projets éducatifs sans limites.
@@ -48,7 +48,7 @@ export default function CTASection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="flex items-center text-white/90"
+                className="flex items-center text-gray-900 dark:text-gray-200"
               >
                 <CheckCircle className="w-5 h-5 mr-2 text-green-300" />
                 <span className="font-medium">{benefit}</span>
@@ -86,7 +86,7 @@ export default function CTASection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
-            className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-white/80"
+            className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-gray-900 dark:text-gray-200"
           >
             <div className="flex items-center">
               <div className="flex text-yellow-300">
@@ -94,7 +94,7 @@ export default function CTASection() {
                   <Star key={i} className="w-5 h-5 fill-current" />
                 ))}
               </div>
-              <span className="ml-2">700,000+ participants/an</span>
+              <span className="ml-2 text-gray-900 dark:text-gray-200">700,000+ participants/an</span>
             </div>
             <div className="flex items-center">
               <div className="flex -space-x-2">
@@ -105,7 +105,7 @@ export default function CTASection() {
                   />
                 ))}
               </div>
-              <span className="ml-3">50+ pays utilisateurs</span>
+              <span className="ml-3 text-gray-900 dark:text-gray-200">50+ pays utilisateurs</span>
             </div>
           </motion.div>
 
@@ -127,7 +127,7 @@ export default function CTASection() {
                 <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-2">
                   <CheckCircle className="w-6 h-6 text-white" />
                 </div>
-                <p className="text-xs text-white/80">{badge}</p>
+                <p className="text-xs text-gray-900 dark:text-white/80">{badge}</p>
               </div>
             ))}
           </motion.div>

@@ -42,6 +42,16 @@ const achievements = [
     description: 'Première étape importante franchie',
   },
   {
+    year: '2022',
+    title: 'Plateforme 2.0',
+    description: 'Refonte complète de l\'interface utilisateur',
+  },
+  {
+    year: '2023',
+    title: 'Expansion internationale',
+    description: 'Déploiement dans 50 pays supplémentaires',
+  },
+  {
     year: '2024',
     title: 'IA Intégrée',
     description: 'Lancement des fonctionnalités d\'intelligence artificielle',
@@ -50,16 +60,16 @@ const achievements = [
 
 export default function StatsSection() {
   return (
-    <section className="py-20 bg-white dark:bg-gray-900 overflow-hidden">
+    <section className="py-16 bg-white dark:bg-gray-900 overflow-hidden border-t border-gray-200 dark:border-gray-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main stats */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4"
+            className="text-3xl sm:text-4xl font-bold text-orange-600 dark:text-orange-400 mb-4"
           >
             France-IOI en chiffres
           </motion.h2>
@@ -75,7 +85,7 @@ export default function StatsSection() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {stats.map((stat, index) => {
             const Icon = stat.icon
             return (
@@ -90,10 +100,10 @@ export default function StatsSection() {
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-600 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Icon className="w-8 h-8 text-white" />
                 </div>
-                <div className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
+                <div className="text-4xl font-bold text-orange-600 dark:text-orange-400 mb-2">
                   {stat.value}
                 </div>
-                <div className="text-xl font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                <div className="text-xl font-semibold text-orange-500 dark:text-orange-300 mb-2">
                   {stat.label}
                 </div>
                 <div className="text-gray-600 dark:text-gray-400 text-sm">
@@ -112,8 +122,8 @@ export default function StatsSection() {
           viewport={{ once: true }}
           className="relative"
         >
-          <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-orange-600 dark:text-orange-400 mb-4">
               Notre parcours
             </h3>
             <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
@@ -124,7 +134,7 @@ export default function StatsSection() {
 
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-0.5 w-0.5 h-full bg-primary-500 hidden lg:block"></div>
+            <div className="absolute left-1/2 transform -translate-x-1 w-2 h-full bg-gradient-to-b from-orange-400 to-orange-500 hidden lg:block shadow-lg rounded-full"></div>
 
             <div className="space-y-8 lg:space-y-12">
               {achievements.map((achievement, index) => (
@@ -141,7 +151,7 @@ export default function StatsSection() {
                   {/* Content */}
                   <div className={`lg:w-5/12 ${index % 2 === 0 ? 'lg:pr-8' : 'lg:pl-8'}`}>
                     <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700">
-                      <div className="text-primary-600 dark:text-primary-400 font-bold text-lg mb-2">
+                      <div className="text-orange-600 dark:text-orange-400 font-bold text-lg mb-2">
                         {achievement.year}
                       </div>
                       <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
@@ -154,7 +164,7 @@ export default function StatsSection() {
                   </div>
 
                   {/* Timeline dot */}
-                  <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary-600 rounded-full border-4 border-white dark:border-gray-900"></div>
+                  <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-orange-600 rounded-full border-4 border-white dark:border-gray-900"></div>
 
                   {/* Spacer for opposite side */}
                   <div className="hidden lg:block lg:w-5/12"></div>
@@ -170,7 +180,7 @@ export default function StatsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-          className="mt-20 text-center"
+          className="mt-16 text-center"
         >
           <div className="bg-primary-600 rounded-2xl p-8 lg:p-12 text-white">
             <h3 className="text-2xl lg:text-3xl font-bold mb-4">
